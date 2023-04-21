@@ -39,11 +39,11 @@
                                 </li>
                                 <li class="flex justify-between text-secondary text-sm mb-1">
                                     <span class="font-semibold">{{ __( 'Payment Status' ) }}</span>
-                                    <span>{{ order.payment_status }}</span>
+                                    <span>{{ order.paymentStatus }}</span>
                                 </li>
                                 <li v-if="order.type === 'delivery'" class="flex justify-between text-secondary text-sm mb-1">
                                     <span class="font-semibold">{{ __( 'Delivery Status' ) }}</span>
-                                    <span>{{ order.delivery_status }}</span>
+                                    <span>{{ order.deliveryStatus }}</span>
                                 </li>
                             </ul>
                         </div>
@@ -129,6 +129,11 @@
                             <td class="p-2 border text-center text-primary" colspan="4"></td>
                             <td class="p-2 border text-primary text-left">{{ __( 'Shipping' ) }}</td>
                             <td class="p-2 border text-right text-primary">{{ order.shipping | currency }}</td>
+                        </tr>
+                        <tr :key="tax.id" v-for="tax of order.taxes">
+                            <td class="p-2 border text-center text-primary" colspan="4"></td>
+                            <td class="p-2 border text-primary text-left">{{ tax.tax_name }} &mdash; {{ order.tax_type === 'inclusive' ? __( 'Inclusive' ) : __( 'Exclusive' )  }}</td>
+                            <td class="p-2 border text-right text-primary">{{ order.tax_value | currency }}</td>
                         </tr>
                         <tr>
                             <td class="p-2 border text-center text-primary" colspan="4"></td>
