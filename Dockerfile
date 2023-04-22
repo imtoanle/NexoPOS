@@ -1,6 +1,6 @@
 FROM webdevops/php-nginx:8.1-alpine
 ENV WEB_DOCUMENT_ROOT=/app/public
-ENV PHP_DISMOD=bz2,calendar,exiif,ffi,intl,gettext,ldap,mysqli,imap,pdo_pgsql,pgsql,soap,sockets,sysvmsg,sysvsm,sysvshm,shmop,xsl,apcu,vips,yaml,imagick,mongodb,amqp
+ENV PHP_DISMOD=bz2,calendar,exiif,ffi,intl,gettext,ldap,mysqli,imap,soap,sockets,sysvmsg,sysvsm,sysvshm,shmop,xsl,apcu,vips,yaml,imagick,mongodb,amqp
 COPY docker/php-nginx /opt/docker
 WORKDIR /app
 COPY . .
