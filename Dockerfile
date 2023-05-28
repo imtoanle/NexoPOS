@@ -1,4 +1,4 @@
-FROM webdevops/php-nginx:8.1-alpine
+FROM webdevops/php-nginx:8.1
 ENV WEB_DOCUMENT_ROOT=/app/public
 ENV PHP_DISMOD=bz2,calendar,exiif,ffi,intl,gettext,ldap,mysqli,imap,soap,sockets,sysvmsg,sysvsm,sysvshm,shmop,xsl,apcu,vips,yaml,imagick,mongodb,amqp
 COPY docker/php-nginx /opt/docker
