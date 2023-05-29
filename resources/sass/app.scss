@@ -5,14 +5,14 @@
 html,
 body {
     height: 100%;
-    font-family: 'Jost';
+    font-family: 'Arial';
     width: 100%;
 }
 
 html,
 body {
     height: 100%;
-    font-family: 'Jost';
+    font-family: 'Arial';
     width: 100%;
 }
 
@@ -90,4 +90,8 @@ button {
     h3 {
         @apply font-semibold;
     }
+}
+
+.text-xxs {
+    font-size: .65rem!important;
 }
