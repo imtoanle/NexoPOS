@@ -72,8 +72,8 @@
                         <div slot="cell" class="w-full h-full" slot-scope="{ data }">
                             <div @click="addToTheCart( data )" :key="data.id" class="cell-item w-full h-full cursor-pointer border flex flex-col items-center justify-center overflow-hidden">
                                 <div class="h-full w-full flex items-center justify-center overflow-hidden">
-                                    <img v-if="data.galleries && data.galleries.filter( i => i.featured === 1 ).length > 0" :src="data.galleries.filter( i => i.featured === 1 )[0].url" class="object-cover h-full" :alt="data.name">
-                                    <i v-if="! data.galleries || data.galleries.filter( i => i.featured === 1 ).length === 0" class="las la-image text-6xl"></i>
+                                    <img v-if="data.galleries && data.galleries.filter( i => i.featured === true ).length > 0" :src="data.galleries.filter( i => i.featured === true )[0].url" class="object-cover h-full" :alt="data.name">
+                                    <i v-if="! data.galleries || data.galleries.filter( i => i.featured === true ).length === 0" class="las la-image text-6xl"></i>
                                 </div>
                                 <div class="h-0 w-full">
                                     <div class="cell-item-label relative w-full flex flex-col items-center justify-center -top-10 h-20 p-2">
