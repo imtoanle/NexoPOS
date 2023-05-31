@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\View;
             @endif
         </div>
         <div class="p-1  border-black text-xxs">
-            <div class="flex flex-wrap -mx-2  items-center justify-center">
-                183 Nguyễn Thị Minh Khai, Nha Trang, Khánh Hòa
+            <div class="flex flex-wrap -mx-2  items-center text-center justify-center">
+                183 Nguyễn Thị Minh Khai - Nha Trang - Khánh Hòa
             </div>
             <div class="flex flex-wrap -mx-2 items-center justify-center">
                 0935 763 999
@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\View;
         </div>
 
         <div class="p-1  border-black">
-            <div class="flex flex-wrap -mx-2 items-center justify-center text-lg font-bold">
+            <div class="flex flex-wrap -mx-2 items-center text-center text-lg font-bold" style="font-size: 1rem!important">
                 HÓA ĐƠN THANH TOÁN
             </div>
             <div class="flex flex-wrap -mx-2 text-xxs items-center justify-center">
@@ -62,7 +62,7 @@ use Illuminate\Support\Facades\View;
                 <div class="px-2 font-bold" style="width: 5rem!important">
                     Địa chỉ:
                 </div>
-                <div class="px-2" style="width: 70%!important">
+                <div class="px-2" style="width: 60%!important">
                     {{ $order->billing_address->address_1 }} - {{ $order->billing_address->phone }}
                 </div>
             </div>
@@ -89,7 +89,7 @@ use Illuminate\Support\Facades\View;
                 <tbody class="text-xxs">
                     @foreach( Hook::filter( 'ns-receipt-products', $order->combinedProducts ) as $product )
                     <tr class="border-l border-r border-black">
-                        <td class="p-1 border-dashed border-b border-black" style="width: 70%!important">
+                        <td class="p-1 border-dashed border-b border-black" style="width: 65%!important">
                             <span class="">{{ $product->name }}</span>
                             <br>
                             <span class="text-xxs">({{ $product->quantity }} {{ $product->unit->name }} x {{ ns()->currency->define( $product->unit_price ) }})</span>
